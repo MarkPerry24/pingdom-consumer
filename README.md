@@ -3,7 +3,9 @@ Pingdom Api Consumer
 
 This is an initial release.  As far as I know this is far more full featured than anything else around and I was intending to implement a full support for the Pingdom API but upon reflection implemented the most common tasks with a view to implementing upon request as some of the features look like they would not see much usage.
 
-This can be used by extracting and running: Import-Module (path to Mperry.Pingdom folder) in powershell cli
+This can be used by extracting and running: 
+"Import-Module (path to Mperry.Pingdom folder)" in powershell cli 
+OR
 Extracting to a path included in PSModulePath and just reopening powershell cli
 
 So far we have support for: 
