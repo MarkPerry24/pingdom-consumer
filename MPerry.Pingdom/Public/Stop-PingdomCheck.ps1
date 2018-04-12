@@ -27,7 +27,7 @@
         Get-PingdomChecks | ?{$_.Name -match "google"} | Stop-PingdomCheck
 
     #>
-    [CmdletBinding()]
+    [CmdletBinding(ConfirmImpact="High")]
     Param
     (
         [string[]]
