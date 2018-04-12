@@ -11,14 +11,12 @@
     Shows check advanced properties:  https://www.pingdom.com/resources/api/2.1
 
     .EXAMPLE
-        $Authtoken = New-PingdomAuthToken [pscredential]::new("username", "securestring")
-        PS C:\>Get-PingdomCheck -authToken $Authtoken -id 123456
+        PS C:\>Get-PingdomCheck -id 123456
 
         Gets advanced properties of check
 
     .EXAMPLE
-        $Authtoken = New-PingdomAuthToken [pscredential]::new("username", "securestring")
-        PS C:\>Get-PingdomHChecks -authToken $Authtoken | ?{$_.name -match "bob"} | Get-PingdomCheck -authToken $Authtoken
+        PS C:\>Get-PingdomHChecks | Where-Object name -match bob | Get-PingdomCheck
         
         Finds all checks with bob in the name and retrieve the advanced properties
     #>
@@ -46,7 +44,7 @@
         foreach ($item in $Id)
         {
             $invokeParameters = @{
-                                    Method      = "GET"
+                                    Method = "GET"
                                     Uri = "checks/$item"
                                     Body = @{
                                         include_teams = $true
