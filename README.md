@@ -20,12 +20,11 @@ Retrieving information about:
     Probes
     Teams
     Users
-
-Creating New Checks
-Modifying Checks
-Removing Checks
-Stopping Checks
-Starting Checks
+    Creating New Checks
+    Modifying Checks
+    Removing Checks
+    Stopping Checks
+    Starting Checks
 
 Please review the help on each command after importing the module e.g.
 
