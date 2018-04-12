@@ -206,10 +206,6 @@
     .EXAMPLE
         Get-PingdomChecks | Where-Object Name -eq "MyBestCheck" | Set-PingdomCheck -Encryption False
 
-    .EXAMPLE
-        Get-PingdomChecks | Where-Object Name -eq "MyBestCheck" | Set-PingdomCheck -ShouldContain $null
-        Clear the Should contain field
-
     #>
 
     [Cmdletbinding(SupportsShouldProcess)]
@@ -254,7 +250,7 @@
 
         [ValidateRange(1, [int32]::MaxValue)]
         [string[]]
-        $integrationids,
+        $Integrationids,
 
         [ValidateRange([uint32]::MinValue, [int32]::MaxValue)]
         [string[]]

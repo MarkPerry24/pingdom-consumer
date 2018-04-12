@@ -177,7 +177,7 @@
 
         [ValidateRange(1, [int32]::MaxValue)]
         [string[]]
-        $integrationids,
+        $Integrationids,
 
         [switch]
         $IPv6,
