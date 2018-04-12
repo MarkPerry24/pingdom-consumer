@@ -206,6 +206,10 @@
     .EXAMPLE
         Get-PingdomChecks | Where-Object Name -eq "MyBestCheck" | Set-PingdomCheck -Encryption False
 
+    .EXAMPLE
+        Get-PingdomChecks | Where-Object Name -eq "MyBestCheck" | Set-PingdomCheck -ShouldContain $null
+        Clear the Should contain field
+
     #>
 
     [Cmdletbinding(SupportsShouldProcess)]
@@ -482,7 +486,7 @@
     {
         # Dynamic Parameters don't support multiple Parameter sets
         if (($PSCmdlet.ParameterSetName -eq "HTTPCheck_1" ) -and
-            (-not($PSBoundParameters."ShouldContain" -xor $PSBoundParameters."ShouldNotContain"))
+            ($PSBoundParameters."ShouldContain" -and $PSBoundParameters."ShouldNotContain")
         )
         {
             throw "ShouldContain and ShouldNotContain cannot both be set"
