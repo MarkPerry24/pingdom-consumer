@@ -1,5 +1,5 @@
 # pingdom-consumer
-Pingdom Api Consumer
+Powershell Pingdom Api Consumer
 
 This is an initial release.  As far as I know this is far more full featured than anything else around and I was intending to implement a full support for the Pingdom API but upon reflection implemented the most common tasks with a view to implementing upon request as some of the features look like they would not see much usage.
 
